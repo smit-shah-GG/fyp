@@ -1,2 +1,3 @@
 pandas
 tensorflow
+nvidia-cudnn-cu12
