@@ -1,0 +1,141 @@
+2025-04-03 02:34:33,345 - INFO - --- Master Executor Started for parallelizable.py ---
+2025-04-03 02:34:33,376 - INFO - Analyzing script: targets/parallelizable.py
+2025-04-03 02:34:33,376 - INFO - Reading script targets/parallelizable.py...
+2025-04-03 02:34:33,376 - INFO - Parsing script targets/parallelizable.py...
+2025-04-03 02:34:33,378 - INFO - Visiting AST for targets/parallelizable.py...
+2025-04-03 02:34:33,378 - INFO - Parsing complete. Imports: 4, Functions: 4, Main Nodes: 15
+2025-04-03 02:34:33,378 - INFO - --- Running Normally: parallelizable.py ---
+2025-04-03 02:34:33,449 - INFO - --- Normal Output ---
+2025-04-03 02:34:33,449 - INFO - 
+--- Target Parallelizable Script Running ---
+(Target) Starting Task 1: Finding max in data_source_1.txt...
+(Target) Finished Task 1. Max = 10000
+(Target) Starting Task 2: Calculating sum in data_source_2.txt...
+(Target) Finished Task 2. Sum = 12701052
+(Target) Starting Task 3: Independent CPU calculation...
+(Target) Finished Task 3.
+(Target) Combining Task1_Max=10000, Task2_Sum=12701052...
+(Target) Finished combining. Final Value = 12711052
+(Target) Final Combined Result: 12711052
+(Target) Direct Run Time: 0.0459 seconds
+--- Target Parallelizable Script End ---
+
+2025-04-03 02:34:33,450 - INFO - ---------------------
+2025-04-03 02:34:33,450 - INFO - Normal Execution Time: 0.0711 seconds
+2025-04-03 02:34:33,450 - INFO - --- Running Broken: parallelizable.py ---
+2025-04-03 02:34:33,450 - INFO - Executing imports...
+2025-04-03 02:34:33,450 - INFO - Imports executed.
+2025-04-03 02:34:33,450 - INFO - Defining 4 functions...
+2025-04-03 02:34:33,451 - INFO - Functions defined.
+2025-04-03 02:34:33,451 - INFO - Executing main block logic...
+2025-04-03 02:34:33,500 - INFO - Main block executed.
+2025-04-03 02:34:33,500 - INFO - ---------------------
+2025-04-03 02:34:33,500 - INFO - Broken Execution Time: 0.0507 seconds
+2025-04-03 02:34:33,500 - INFO - (Note: Main block logic executed sequentially by master)
+2025-04-03 02:34:33,501 - INFO - Statistics saved to /home/smit/work/other/fyp/execution_stats.csv
+2025-04-03 02:34:33,501 - INFO - --- Master Executor Finished for parallelizable.py ---
+2025-04-03 02:35:25,274 - INFO - --- Master Executor Started for simple.py ---
+2025-04-03 02:35:25,306 - INFO - Analyzing script: targets/simple.py
+2025-04-03 02:35:25,306 - INFO - Reading script targets/simple.py...
+2025-04-03 02:35:25,307 - INFO - Parsing script targets/simple.py...
+2025-04-03 02:35:25,308 - INFO - Visiting AST for targets/simple.py...
+2025-04-03 02:35:25,308 - INFO - Parsing complete. Imports: 3, Functions: 2, Main Nodes: 17
+2025-04-03 02:35:25,308 - INFO - --- Running Normally: simple.py ---
+2025-04-03 02:35:25,361 - INFO - --- Normal Output ---
+2025-04-03 02:35:25,362 - INFO - 
+--- Target Simple Script Running ---
+(Target) Starting Task A: Reading data_a.txt from /home/smit/work/other/fyp/comparison_logic_data...
+(Target) Finished Task A: Read 500 lines in 0.0001s.
+(Target) Starting Task B: Processing based on 500 lines...
+(Target) Finished Task B in 0.0271s.
+(Target) Results: A_lines=500, B_result=LengthyNum
+(Target) Direct Run Total Time: 0.027223067999898376 seconds
+--- Target Simple Script End ---
+
+2025-04-03 02:35:25,362 - INFO - ---------------------
+2025-04-03 02:35:25,362 - INFO - Normal Execution Time: 0.0533 seconds
+2025-04-03 02:35:25,362 - INFO - --- Running Broken: simple.py ---
+2025-04-03 02:35:25,362 - INFO - Executing imports...
+2025-04-03 02:35:25,362 - INFO - Imports executed.
+2025-04-03 02:35:25,362 - INFO - Defining 2 functions...
+2025-04-03 02:35:25,363 - INFO - Functions defined.
+2025-04-03 02:35:25,363 - INFO - Executing main block logic...
+2025-04-03 02:35:25,393 - INFO - Main block executed.
+2025-04-03 02:35:25,394 - INFO - ---------------------
+2025-04-03 02:35:25,394 - INFO - Broken Execution Time: 0.0318 seconds
+2025-04-03 02:35:25,394 - INFO - (Note: Main block logic executed sequentially by master)
+2025-04-03 02:35:25,394 - INFO - Statistics saved to /home/smit/work/other/fyp/execution_stats.csv
+2025-04-03 02:35:25,394 - INFO - --- Master Executor Finished for simple.py ---
+2025-04-03 02:35:48,468 - INFO - --- Master Executor Started for looping.py ---
+2025-04-03 02:35:48,499 - INFO - Analyzing script: targets/looping.py
+2025-04-03 02:35:48,499 - INFO - Reading script targets/looping.py...
+2025-04-03 02:35:48,499 - INFO - Parsing script targets/looping.py...
+2025-04-03 02:35:48,500 - INFO - Visiting AST for targets/looping.py...
+2025-04-03 02:35:48,500 - INFO - Parsing complete. Imports: 4, Functions: 1, Main Nodes: 15
+2025-04-03 02:35:48,500 - INFO - --- Running Normally: looping.py ---
+2025-04-03 02:35:48,527 - INFO - --- Normal Output ---
+2025-04-03 02:35:48,527 - INFO - 
+--- Target Looping Script Running ---
+(Target) Starting sequential loop...
+  (Target) Processing item 0 (Reading item_0.txt)...
+  (Target) Finished item 0. Avg: 4912.92
+  (Target) Processing item 1 (Reading item_1.txt)...
+  (Target) Finished item 1. Avg: 4939.05
+  (Target) Processing item 2 (Reading item_2.txt)...
+  (Target) Finished item 2. Avg: 5038.84
+  (Target) Processing item 3 (Reading item_3.txt)...
+  (Target) Finished item 3. Avg: 5024.15
+  (Target) Processing item 4 (Reading item_4.txt)...
+  (Target) Finished item 4. Avg: 4887.66
+(Target) Finished sequential loop.
+(Target) Results: [(0, 4912.9209183673465), (1, 4939.054491899853), (2, 5038.843260188088), (3, 5024.145454545454), (4, 4887.657817109144)]
+(Target) Direct Run Time: 0.0007 seconds
+--- Target Looping Script End ---
+
+2025-04-03 02:35:48,527 - INFO - ---------------------
+2025-04-03 02:35:48,527 - INFO - Normal Execution Time: 0.0267 seconds
+2025-04-03 02:35:48,528 - INFO - --- Running Broken: looping.py ---
+2025-04-03 02:35:48,528 - INFO - Executing imports...
+2025-04-03 02:35:48,528 - INFO - Imports executed.
+2025-04-03 02:35:48,528 - INFO - Defining 1 functions...
+2025-04-03 02:35:48,529 - INFO - Functions defined.
+2025-04-03 02:35:48,529 - INFO - Executing main block logic...
+2025-04-03 02:35:48,532 - INFO - Main block executed.
+2025-04-03 02:35:48,532 - INFO - ---------------------
+2025-04-03 02:35:48,532 - INFO - Broken Execution Time: 0.0045 seconds
+2025-04-03 02:35:48,532 - INFO - (Note: Main block logic executed sequentially by master)
+2025-04-03 02:35:48,532 - INFO - Statistics saved to /home/smit/work/other/fyp/execution_stats.csv
+2025-04-03 02:35:48,532 - INFO - --- Master Executor Finished for looping.py ---
+2025-04-03 02:36:01,040 - INFO - --- Master Executor Started for branching.py ---
+2025-04-03 02:36:01,075 - INFO - Analyzing script: targets/branching.py
+2025-04-03 02:36:01,075 - INFO - Reading script targets/branching.py...
+2025-04-03 02:36:01,075 - INFO - Parsing script targets/branching.py...
+2025-04-03 02:36:01,076 - INFO - Visiting AST for targets/branching.py...
+2025-04-03 02:36:01,077 - INFO - Parsing complete. Imports: 4, Functions: 3, Main Nodes: 20
+2025-04-03 02:36:01,077 - INFO - --- Running Normally: branching.py ---
+2025-04-03 02:36:01,171 - INFO - --- Normal Output ---
+2025-04-03 02:36:01,171 - INFO - 
+--- Target Branching Script Running ---
+(Target) Condition is: True
+(Target) Starting heavy branch processing (CPU)...
+(Target) Finished heavy branch in 0.0651s.
+(Target) Analyzing results for Heavy Result...
+(Target) Finished analysis in 0.0017s.
+(Target) Final Result Tag: Heavy Result
+(Target) Direct Run Total Time: 0.06684161099997254 seconds
+--- Target Branching Script End ---
+
+2025-04-03 02:36:01,171 - INFO - ---------------------
+2025-04-03 02:36:01,171 - INFO - Normal Execution Time: 0.0936 seconds
+2025-04-03 02:36:01,171 - INFO - --- Running Broken: branching.py ---
+2025-04-03 02:36:01,171 - INFO - Executing imports...
+2025-04-03 02:36:01,172 - INFO - Imports executed.
+2025-04-03 02:36:01,173 - INFO - Defining 3 functions...
+2025-04-03 02:36:01,174 - INFO - Functions defined.
+2025-04-03 02:36:01,174 - INFO - Executing main block logic...
+2025-04-03 02:36:01,189 - INFO - Main block executed.
+2025-04-03 02:36:01,189 - INFO - ---------------------
+2025-04-03 02:36:01,189 - INFO - Broken Execution Time: 0.0177 seconds
+2025-04-03 02:36:01,189 - INFO - (Note: Main block logic executed sequentially by master)
+2025-04-03 02:36:01,189 - INFO - Statistics saved to /home/smit/work/other/fyp/execution_stats.csv
+2025-04-03 02:36:01,189 - INFO - --- Master Executor Finished for branching.py ---

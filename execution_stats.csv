@@ -1,0 +1,5 @@
+timestamp,script_name,normal_time_s,normal_status,broken_time_s,broken_status,error_message
+2025-04-03T02:34:33.346146,parallelizable.py,0.0711,Success,0.0507,Success,
+2025-04-03T02:35:25.274400,simple.py,0.0533,Success,0.0318,Success,
+2025-04-03T02:35:48.468293,looping.py,0.0267,Success,0.0045,Success,
+2025-04-03T02:36:01.040202,branching.py,0.0936,Success,0.0177,Success,
